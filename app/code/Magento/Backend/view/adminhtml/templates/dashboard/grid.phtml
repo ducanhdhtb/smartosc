@@ -78,7 +78,7 @@ require(deps, function(<?= ($block->getDependencyJsObject() ? 'registry' : '') ?
     <?php endif; ?>
     <?php if ($block->getRowInitCallback()): ?>
         <?= /* @escapeNotVerified */ $block->getJsObjectName() ?>.initRowCallback = <?= /* @escapeNotVerified */ $block->getRowInitCallback() ?>;
-        <?= /* @escapeNotVerified */ $block->getJsObjectName() ?>.rows.each(function(row){<?= /* @escapeNotVerified */ $block->getRowInitCallback() ?>(<?= /* @escapeNotVerified */ $block->getJsObjectName() ?>, row)});
+        <?= /* @escapeNotVerified */ $block->getJsObjectName() ?>.rows.each(function(row){<?= /* @escapeNotVerified */ $block->getRowInitCallback() ?>(<?= /* @escapeNotVerified */ $block->getJsObjectName() ?>, row;)});
     <?php endif; ?>
     <?php if ($block->getMassactionBlock()->isAvailable()): ?>
     <?= /* @escapeNotVerified */ $block->getMassactionBlock()->getJavaScript() ?>

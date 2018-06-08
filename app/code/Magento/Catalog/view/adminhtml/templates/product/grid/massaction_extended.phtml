@@ -67,17 +67,17 @@
             switch (massAction) {
                 <?php if ($block->getUseSelectAll()):?>
                 case 'selectAll':
-                    return <?= /* @escapeNotVerified */ $block->getJsObjectName() ?>.selectAll();
-                    break
+                    return; <?= /* @escapeNotVerified */ $block->getJsObjectName() ?>.selectAll();
+                    break;
                 case 'unselectAll':
-                    return <?= /* @escapeNotVerified */ $block->getJsObjectName() ?>.unselectAll();
-                    break
+                    return; <?= /* @escapeNotVerified */ $block->getJsObjectName() ?>.unselectAll();
+                    break;
                 <?php endif; ?>
                 case 'selectVisible':
-                    return <?= /* @escapeNotVerified */ $block->getJsObjectName() ?>.selectVisible();
-                    break
+                    return; <?= /* @escapeNotVerified */ $block->getJsObjectName() ?>.selectVisible();
+                    break;
                 case 'unselectVisible':
-                    return <?= /* @escapeNotVerified */ $block->getJsObjectName() ?>.unselectVisible();
+                    return; <?= /* @escapeNotVerified */ $block->getJsObjectName() ?>.unselectVisible();
                     break
             }
             this.blur();

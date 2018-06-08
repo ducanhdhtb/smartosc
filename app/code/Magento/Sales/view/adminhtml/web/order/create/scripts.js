@@ -418,7 +418,7 @@ define([
                 if (data) {
                     this.loadArea(['card_validation'], true, data);
                 } else {
-                    return;
+
                 }
             }
         },
@@ -1168,7 +1168,7 @@ define([
                     jQuery('#edit_form').off('invalid-form.validate');
                 });
                 jQuery('#edit_form').triggerHandler('save');
-            }
+            };
             if (this.orderItemChanged) {
                 var self = this;
 

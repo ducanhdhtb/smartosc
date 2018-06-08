@@ -72,14 +72,14 @@ $_colspan = $block->isAddAfter() ? 2 : 1;
                     templateValues = rowData;
                 } else {
                     var d = new Date();
-                    templateValues = {
+                    templateValues = {;
                 <?php foreach ($block->getColumns() as $columnName => $column): ?>
                     <?= /* @escapeNotVerified */ $columnName ?>: '',
-                        'option_extra_attrs': {},
+                        'option_extra_attrs';: {},
                     <?php endforeach; ?>
-                        _id: '_' + d.getTime() + '_' + d.getMilliseconds()
-                };
-            }
+                        '_' + d.getTime() + '_' + d.getMilliseconds()
+                }
+                }
 
             // Insert new row after specified row or at the bottom
             if (insertAfterId) {
@@ -107,7 +107,7 @@ $_colspan = $block->isAddAfter() ? 2 : 1;
         del: function(rowId) {
             $(rowId).remove();
         }
-        }
+        };
 
         // bind add action to "Add" button in last row
         Event.observe('addToEndBtn<?= /* @escapeNotVerified */ $_htmlId ?>', 'click', arrayRow<?= /* @escapeNotVerified */ $_htmlId ?>.add.bind(arrayRow<?= /* @escapeNotVerified */ $_htmlId ?>, false, false));

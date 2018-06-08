@@ -150,7 +150,7 @@ var fields = $$('.qty-input,.order-subtotal-table input[type="text"]');
 updateButtons.each(function (elem) {elem.disabled=true;elem.addClassName('disabled');});
 
 for(var i=0;i<fields.length;i++){
-    fields[i].observe('change', checkButtonsRelation)
+    fields[i].observe('change', checkButtonsRelation);
     fields[i].baseValue = fields[i].value;
 }
 
@@ -175,13 +175,13 @@ submitCreditMemo = function() {
     if ($('creditmemo_do_offline')) $('creditmemo_do_offline').value=0;
     // Temporary solution will be replaced after refactoring order functionality
     jQuery('#edit_form').triggerHandler('save');
-}
+};
 
 submitCreditMemoOffline = function() {
     if ($('creditmemo_do_offline')) $('creditmemo_do_offline').value=1;
     // Temporary solution will be replaced after refactoring order functionality
     jQuery('#edit_form').triggerHandler('save');
-}
+};
 
 var sendEmailCheckbox = $('send_email');
 

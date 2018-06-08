@@ -38,7 +38,7 @@ class Updater extends \Magento\Config\Block\System\Config\Form\Field
 
         $js = '<script>
               require(["prototype", "mage/adminhtml/form"], function(){
-               updater = new RegionUpdater("tax_defaults_country", "none", "tax_defaults_region", %s, "nullify");
+               updater = new RegionUpdater("tax_defaults_country", "none", "tax_defaults_region", %s, "nullify";)
                if(updater.lastCountryId) {
                    var tmpRegionId = $("tax_defaults_region").value;
                    var tmpCountryId = updater.lastCountryId;

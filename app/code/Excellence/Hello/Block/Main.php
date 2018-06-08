@@ -1,16 +1,32 @@
 <?php
 namespace Excellence\Hello\Block;
-  
+
 class Main extends \Magento\Framework\View\Element\Template
-{   
+{
+    protected $_testFactory;
     public function __construct(
-        \Magento\Framework\View\Element\Template\Context $context
+        \Magento\Framework\View\Element\Template\Context $context,
+        \Excellence\Hello\Model\TestFactory $testFactory
     )
     {
+        $this->_testFactory = $test
+        Factory;
         parent::__construct($context);
     }
     protected function _prepareLayout()
     {
-         $this->setText('Testing');  
+        /*$test = $this->_testFactory->create();
+        $test->setTitle('Test Title');
+        $test->save();
+        $this->setTestModel($test);*/
+    }
+
+    public function test()
+    {
+        $test = $this->_testFactory->create();
+        $collection = $test->getCollection();
+        foreach($collection as $row){
+            print_r($row->getData());
+        }
     }
 }

@@ -139,18 +139,18 @@
                         },
 
                         rebuildTrees : function(){
-                            editSet.req.attributes = new Array();
+                            editSet.req.attributes = [];
                             rootNode = TreePanels.root;
                             var gIterator = 0;
                             for( i in rootNode.childNodes ) {
                                 if(rootNode.childNodes[i].id) {
                                     var group = rootNode.childNodes[i];
-                                    editSet.req.groups[gIterator] = new Array(group.id, group.attributes.text.strip(), (gIterator+1));
-                                    var iterator = 0
+                                    editSet.req.groups[gIterator] = [group.id, group.attributes.text.strip(), (gIterator+1)];
+                                    var iterator = 0;
                                     for( j in group.childNodes ) {
                                         iterator ++;
                                         if( group.childNodes[j].id > 0 ) {
-                                            editSet.req.attributes[group.childNodes[j].id] = new Array(group.childNodes[j].id, group.id, iterator, group.childNodes[j].attributes.entity_id);
+                                            editSet.req.attributes[group.childNodes[j].id] = [group.childNodes[j].id, group.id, iterator, group.childNodes[j].attributes.entity_id];
                                         }
                                     }
                                     iterator = 0;
@@ -158,7 +158,7 @@
                                 gIterator ++;
                             }
 
-                            editSet.req.not_attributes = new Array();
+                            editSet.req.not_attributes = [];
                             rootNode = TreePanels.root2;
 
                             var iterator = 0;
@@ -259,7 +259,7 @@
                         },
 
                         rightAppend : function(node) {
-                            return;
+
                         },
 
                         addGroup : function() {
@@ -448,10 +448,10 @@
                 function initVars() {
                     editSet.req = {};
                     editSet.req.attributes = false;
-                    editSet.req.groups = new Array();
+                    editSet.req.groups = [];
                     editSet.req.not_attributes = false;
                     editSet.req.attribute_set_name = false;
-                    editSet.req.removeGroups = new Array();
+                    editSet.req.removeGroups = [];
                 }
 
                 jQuery(function() {

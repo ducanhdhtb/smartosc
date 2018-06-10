@@ -15,3 +15,4 @@ class Test extends \Magento\Framework\Model\AbstractModel implements TestInterfa
         return [self::CACHE_TAG . '_' . $this->getId()];
     }
 }
+

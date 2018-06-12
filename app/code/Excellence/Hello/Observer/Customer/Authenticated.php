@@ -24,3 +24,4 @@ class Authenticated implements ObserverInterface
         //print_r($customer->getData());exit;
         $this->logger->warn('Customer Logged IN:' . $customer->getFirstname());
     }
+}

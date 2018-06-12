@@ -4,5 +4,8 @@
         <route id="excellence" frontName="excellence">
             <module name="Excellence_Hello" />
         </route>
+        <route id="registry" frontName="registry">
+            <module name="Excellence_Hello" />
+        </route>
     </router>
 </config>

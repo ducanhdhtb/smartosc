@@ -1,22 +1,29 @@
-<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
-            <item name="provider" xsi:type="string">mageplaza_helloworld_post_listing.mageplaza_helloworld_post_listing_data_source</item>
-            <item name="deps" xsi:type="string">mageplaza_helloworld_post_listing.mageplaza_helloworld_post_listing_data_source</item>
+            <item name="provider" xsi:type="string">
+                mageplaza_helloworld_post_listing.mageplaza_helloworld_post_listing_data_source
+            </item>
+            <item name="deps" xsi:type="string">
+                mageplaza_helloworld_post_listing.mageplaza_helloworld_post_listing_data_source
+            </item>
         </item>
         <item name="spinner" xsi:type="string">spinner_columns</item>
         <item name="buttons" xsi:type="array">
             <item name="add" xsi:type="array">
                 <item name="name" xsi:type="string">add</item>
-                <item name="label" xsi:type="string" translate="true">Add New Post</item>
+                <item name="label" xsi:type="string" translate="true">Add haha!</item>
                 <item name="class" xsi:type="string">primary</item>
-                <item name="url" xsi:type="string">*/*/new</item>
+                <item name="url" xsi:type="string">*/*/add</item>
             </item>
         </item>
     </argument>
     <dataSource name="nameOfDataSource">
         <argument name="dataProvider" xsi:type="configurableObject">
-            <argument name="class" xsi:type="string">Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider</argument>
+            <argument name="class" xsi:type="string">
+                Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider
+            </argument>
             <argument name="name" xsi:type="string">mageplaza_helloworld_post_listing_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">post_id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
@@ -85,47 +92,5 @@
             </argument>
         </column>
 
-
-
     </columns>
-
-
-    <selectionsColumn name="ids">
-        <argument name="data" xsi:type="array">
-            <item name="config" xsi:type="array">
-                <item name="resizeEnabled" xsi:type="boolean">false</item>
-                <item name="resizeDefaultWidth" xsi:type="string">55</item>
-                <item name="indexField" xsi:type="string">id</item>
-            </item>
-        </argument>
-    </selectionsColumn>
-
-    <!-- ... other block of code -->
-    <listingToolbar name="listing_top">
-        <!-- ... other block of code -->
-        <columnsControls name="columns_controls"/>
-        <filterSearch name="fulltext"/>
-        <filters name="listing_filters" />
-        <exportButton name="export_button"/>
-        <paging name="listing_paging"/>
-        <massaction name="listing_massaction">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="selectProvider" xsi:type="string">hello_world_grid.hello_world_grid.hello_world_columns.ids</item>
-                    <item name="indexField" xsi:type="string">entity_id</item>
-                </item>
-            </argument>
-            <action name="delete">
-                <argument name="data" xsi:type="array">
-                    <item name="config" xsi:type="array">
-                        <item name="type" xsi:type="string">delete</item>
-                        <item name="label" xsi:type="string" translate="true">Delete</item>
-                        <item name="url" xsi:type="url" path="hello/world/massDelete"/>
-                    </item>
-                </argument>
-            </action>
-        </massaction>
-    </listingToolbar>
-
 </listing>
-

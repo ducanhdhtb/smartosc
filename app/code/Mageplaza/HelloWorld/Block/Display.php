@@ -21,9 +21,4 @@ class Display extends \Magento\Framework\View\Element\Template
         $post = $this->_postFactory->create();
         return $post->getCollection();
     }
-
-    public function check()
-    {
-        return "Check ok!";
-    }
 }

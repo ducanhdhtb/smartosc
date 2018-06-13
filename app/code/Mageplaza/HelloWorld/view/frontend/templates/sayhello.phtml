@@ -5,7 +5,7 @@
  */
 
 echo $block->sayHello();
-echo $block->check();
+
 ?>
 
 <style>
@@ -21,6 +21,8 @@ echo $block->check();
         <th class="post-id">Id</th>
         <th class="post-name">Name</th>
         <th>Content</th>
+        <th>Create at</th>
+
     </tr>
     <?php
     foreach ($block->getPostCollection() as $key=>$post){
@@ -28,6 +30,8 @@ echo $block->check();
                     <td>'.$post->getPostId().'</td>
                     <td>'.$post->getName().'</td>
                     <td>'.$post->getPostContent().'</td>
+                     <td>'.$post->getCreatedAt().'</td>
+
                   </tr>';
     }
     ?>

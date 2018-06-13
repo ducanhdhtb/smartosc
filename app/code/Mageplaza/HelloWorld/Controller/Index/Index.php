@@ -21,6 +21,7 @@ class Index extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $post = $this->_postFactory->create();
+
         $collection = $post->getCollection();
         foreach($collection as $item){
             echo "<pre>";

@@ -14,18 +14,9 @@ class Main extends \Magento\Framework\View\Element\Template
     }
     protected function _prepareLayout()
     {
-        /*$test = $this->_testFactory->create();
+        $test = $this->_testFactory->create();
         $test->setTitle('Test Title');
         $test->save();
-        $this->setTestModel($test);*/
-    }
-
-    public function test()
-    {
-        $test = $this->_testFactory->create();
-        $collection = $test->getCollection();
-        foreach($collection as $row){
-            print_r($row->getData());
-        }
+        $this->setTestModel($test);
     }
 }

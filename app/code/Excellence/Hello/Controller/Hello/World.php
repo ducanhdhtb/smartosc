@@ -9,12 +9,17 @@ class World extends \Magento\Framework\App\Action\Action
         \Magento\Framework\App\Action\Context $context,
         \Magento\Framework\View\Result\PageFactory $resultPageFactory)
     {
-        $this->resultPageFactory = $resultPageFactory;       
+        $this->resultPageFactory = $resultPageFactory;
         return parent::__construct($context);
     }
      
     public function execute()
     {
-        return $this->resultPageFactory->create(); 
+        //return $this->resultPageFactory->create();
+        $model = $this->_objectManager->create('Excellence\Hello\Model\Test');
+        $model->addData([
+            'title' =>'Item add ',
+        ])->save();
+
     } 
 }

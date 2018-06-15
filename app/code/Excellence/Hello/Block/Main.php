@@ -9,8 +9,7 @@ class Main extends \Magento\Framework\View\Element\Template
         \Excellence\Hello\Model\TestFactory $testFactory
     )
     {
-        $this->_testFactory = $test
-        Factory;
+        $this->_testFactory = $testFactory;
         parent::__construct($context);
     }
     protected function _prepareLayout()

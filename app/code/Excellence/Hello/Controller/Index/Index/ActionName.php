@@ -9,7 +9,9 @@ class Actionname name extends \Magento\Framework\App\Action\Action
         // Your code
         $resultRedirect->setPath('excellence/index/add');
         return $resultRedirect;
+
         //return $this->resultRedirectFactory->create()->setPath('excellence/index/add/', ['_current' => true]);
+
     }
 }
 ?>

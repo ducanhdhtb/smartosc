@@ -1,0 +1,7 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <preference for="Magento\Catalog\Block\Adminhtml\Product\Edit\Tab\Options\Option" type="Smart\Osc\Block\Adminhtml\Product\Edit\Tab\Options\Option" />
+    <preference for="Magento\Catalog\Ui\DataProvider\Product\Form\Modifier\CustomOptions" type="Smart\Osc\Ui\DataProvider\Product\Form\Modifier\CustomOptions" />
+</config>
+
+
+

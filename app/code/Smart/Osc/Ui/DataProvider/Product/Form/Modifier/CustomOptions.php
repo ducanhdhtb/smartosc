@@ -83,6 +83,8 @@ class CustomOptions extends \Magento\Catalog\Ui\DataProvider\Product\Form\Modifi
     const FIELD_FILE_EXTENSION_NAME = 'file_extension';
     const FIELD_IMAGE_SIZE_X_NAME = 'image_size_x';
     const FIELD_IMAGE_SIZE_Y_NAME = 'image_size_y';
+
+    //Define the constants that user creates
     const FIELD_IS_IMAGE = 'is_image';
     const FIELD_IS_UPLOAD = 'is_upload';
     const FIELD_IS_THUMB_COLOR = 'thumb_color';
@@ -992,21 +994,38 @@ class CustomOptions extends \Magento\Catalog\Ui\DataProvider\Product\Form\Modifi
                     'config' => [
                         'label' => __('Thumb Color'),
                         'componentType' => Field::NAME,
-                        'component' => 'Magento_Catalog/js/components/custom-options-component',
+                        'component' => 'Smart_Osc/js/form/element/color-select',
+                        'elementTmpl' => 'Smart_Osc/form/element/color-select',
+                        'formElement' => Input::NAME,
                         'formElement' => Input::NAME,
                         'dataScope' => static::FIELD_IS_THUMB_COLOR,
-                        'dataType' => Number::NAME,
-                        'addbefore' => $this->getCurrencySymbol(),
-                        'addbeforePool' => $this->productOptionsPrice->prefixesToOptionArray(),
+                        'dataType' => Text::NAME,
                         'sortOrder' => $sortOrder,
-                        'validation' => [
-                            'validate-zero-or-greater' => true
-                        ],
                     ],
                 ],
             ],
         ];
     }
+    /*
+     *  return [
+            'arguments' => [
+                'data' => [
+                    'config' => [
+                        'label' => __('Thumb Color'),
+                        'componentType' => Field::NAME,
+                        'component' => 'Test_BOverride/js/form/element/color-select',
+                        'elementTmpl' => 'Test_BOverride/form/element/color-select',
+                        'formElement' => Input::NAME,
+                        'dataScope' => static::FIELD_THUMB_COLOR,
+                        'dataType' => Text::NAME,
+                        'sortOrder' => $sortOrder,
+                    ],
+                ],
+            ],
+        ];
+     */
+
+
     protected function getIsDisplayModeFieldConfig($sortOrder)
     {
         return [
@@ -1327,4 +1346,5 @@ class CustomOptions extends \Magento\Catalog\Ui\DataProvider\Product\Form\Modifi
 
         return $value;
     }
+
 }
